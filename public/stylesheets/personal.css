@@ -1,14 +1,19 @@
-#login div.modal-body div.form-group {
+.log-form-modal {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
 }
 
-#login div.modal-body div.form-group label {
+.log-form-modal label {
     width: 100%;
 }
 
-#login div.modal-body div.form-group button {
+.log-form-modal button {
     width: 35%;
     margin: 1.5rem;
+}
+
+.log-form-modal hr {
+    margin: 2rem;
+    width: 80%;
 }
