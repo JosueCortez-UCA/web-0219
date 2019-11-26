@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+doctype html
 html(lang="es")
     head
         meta(charset="UTF-8")
@@ -8,88 +8,9 @@ html(lang="es")
         link(rel='stylesheet', href='/stylesheets/personal.css')
         title= title
     body
-        nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
-            a.navbar-brand(href="/") Inicio
-            button.navbar-toggler (type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation")
-                span.navbar-toggler-icon
+        include partials/nav.pug
 
-            div.collapse.navbar-collapse#navbarColor01
-                ul.navbar-nav.mr-auto
-                    li.nav-item
-                        a.nav-link(href="") Historial
-                            span.sr-only(current)
-                    
-                    li.nav-item.active
-                        a.nav-link(href="/stats") Estadisticas
-                    
-                    li.nav-item
-                        a.nav-link(href="") Gestion de cuentas
-                    
-                    li.nav-item
-                        a.nav-link(href="") About
-                    
-                form.form-inline.my-2.my-lg-0
-                    a.nav-link(href="#login" data-toggle="modal") Iniciar sesión
-
-        div.modal.fade#login(tabindex="-1" role="dialog")
-            div.modal-dialog.modal-dialog-centered(role="document")
-                div.modal-content
-                    div.modal-header
-                        h5.modal-title#exampleModalLongTitle Inicio de sesión
-                        button.close(type="button" data-dismiss="modal" aria-label="Close")
-                            span(aria-hidden="true") &times;
-
-                    div.modal-body
-                        div.form-group.log-form-modal
-                            label.col-form-label(for="user") Usuario
-                            input#user.form-control(type="text" placeholder="nombre usuario")
-                            br
-                            br
-                            label.col-form-label(for="password") Constraseña
-                            input#password.form-control(type="password" placeholder="************")
-                            button#login-btn.btn.btn-primary(type="button") Iniciar
-                            button.btn.btn-primary(type="button" data-toggle="modal" data-target="#signin" data-dismiss="modal") Registrarse
-
-                    div.modal-footer
-                        button.btn.btn-outline-danger(type="button" data-dismiss="modal") Cerrar
-
-        div.modal.fade#signin(tabindex="-1" role="dialog")
-            div.modal-dialog.modal-dialog-centered(role="document")
-                div.modal-content
-                    div.modal-header
-                        h5.modal-title#exampleModalLongTitle Registro
-                        button.close(type="button" data-dismiss="modal" aria-label="Close")
-                            span(aria-hidden="true") &times;
-
-                    div.modal-body
-                        div.form-group.log-form-modal
-                            label.col-form-label(for="name") Nombre
-                            input#name.form-control(type="text" placeholder="igrese sus nombres")
-                            br
-                            label.col-form-label(for="lastname") Apellidos
-                            input#lastname.form-control(type="text" placeholder="ingrese sus apellidos")
-                            br
-                            label.col-form-label(for="email") Correo electronico
-                            input#email.form-control(type="email" placeholder="email@example.com")
-                            br
-                            label.col-form-label(for="pass1") Constraseña
-                            input#pass1.form-control(type="password1" placeholder="************")
-                            br
-                            label.col-form-label(for="pass2") Repita la constraseña
-                            input#pass2.form-control(type="password2" placeholder="************")
-                            br
-                            hr
-                            div.form-check
-                                label.form-check-label
-                                    input.form-check-input(type="checkbox" value="")
-                                    label Eres estudiantes de la UCA?
-                            label.col-form-label(for="carnet") Ingrese su carnet
-                            input#carnet.form-control(type="carnet" placeholder="00000000")
-
-                            button#signin-btn.btn.btn-primary(type="button") Registrarse
-
-                    div.modal-footer
-                        button.btn.btn-outline-danger(type="button" data-dismiss="modal") Cerrar
+include partials/modal.pug
 
 script(src='/javascripts/jquery.js')
 script(src='/javascripts/bootstrap.js')

@@ -1,6 +1,20 @@
-extends layout
+doctype html
+html(lang="es")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="/stylesheets/bootstrap.css")
+    link(rel='stylesheet', href='/stylesheets/personal.css')
+    title= title
+  body
+    include partials/nav.pug
 
-block content
-  h1= title
-  p Welcome to #{title}
-  a(href="/stats") Estadisticas
+    h1= title
+    p Welcome to #{title}
+
+
+include partials/modal.pug
+
+script(src='/javascripts/jquery.js')
+script(src='/javascripts/bootstrap.js')
